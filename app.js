@@ -6,6 +6,10 @@ var app = express();
 
 module.exports = app; // for testing
 
+/*app.get('/api', function(req,res) {
+		res.render('index.html');
+});*/
+
 app.use(express.static('dist'));
 
 var config = {
