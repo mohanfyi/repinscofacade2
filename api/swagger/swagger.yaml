@@ -152,7 +152,6 @@ definitions:
       xml: 
         name: "Client"         
   Dashboard:
-      type: "object"
       properties:
         client:
           type: "string"
