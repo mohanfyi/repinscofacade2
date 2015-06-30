@@ -154,7 +154,9 @@ definitions:
   Dashboard:
       properties:
         client:
-          type: "string"
+          type: "array"
+          items:
+            $ref: "#/definitions/Client"
       xml:
         name: "Dashboard" 
   HelloWorldResponse:
