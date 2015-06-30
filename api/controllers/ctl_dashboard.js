@@ -26,7 +26,6 @@ var http = require('http');
   we specify that in the exports of this module that 'hello' maps to the function named 'hello'
  */
 module.exports = {
-  ping: fnPing, 
   //getdashboarddata: fnGetDashboardDataForClient,
   getdashboarddata: fnGetDashboardDataForClientDummy,
 
@@ -131,20 +130,4 @@ function getClient() {
       "birth_dte":"1/1/2000"
       };
   return client;
-}
-
-
-/*
-  Functions in a127 controllers used for operations should take two parameters:
-
-  Param 1: a handle to the request object
-  Param 2: a handle to the response object
- */
-function fnPing(req, res) {
-  // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var name = req.swagger.params.name.value || 'stranger';
-  var hello = util.format('This service is functioning normally, %s!', name);
-
-  // this sends back a JSON response which is a single string
-  res.json(hello);
 }
