@@ -5,7 +5,7 @@ info:
 # during dev, should point to your local machine
 host: localhost:10010
 # basePath prefixes all resource paths 
-basePath: /
+basePath: /o
 #
 tags:
   -
@@ -102,7 +102,6 @@ paths:
 # complex objects have schema definitions
 definitions:
   Product: 
-      type: "object"
       properties: 
         product_id_num: 
           type: "string"
@@ -131,7 +130,6 @@ definitions:
       xml: 
         name: "Product"
   Client: 
-      type: "object"
       properties: 
         client_id: 
           type: "string"
