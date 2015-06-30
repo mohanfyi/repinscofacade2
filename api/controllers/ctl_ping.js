@@ -38,7 +38,7 @@ module.exports = {
 function fnPing(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
     var str = 'This service is functioning normally!');
-
+ res.header('Access-Control-Allow-Origin', '*');
   // this sends back a JSON response which is a single string
   res.json(str);
 }
