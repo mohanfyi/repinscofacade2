@@ -155,9 +155,7 @@ definitions:
       type: "object"
       properties:
         client:
-          type: "array"
-          items: 
-            $ref: "#/definitions/Client"
+          type: "string"
       xml:
         name: "Dashboard" 
   HelloWorldResponse:
