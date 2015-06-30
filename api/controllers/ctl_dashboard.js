@@ -74,14 +74,14 @@ function fnGetDashboardDataForClient(req, response) {
 function fnGetDashboardDataForClientDummy(req, res) {
   var client = getClient();
   //client.products = getProducts();
-  /*var dashboardData = {
-    "client": client
-  }*/
   var dashboardData = {
+    "Client": client
+  }
+  /*var dashboardData = {
     "Client": {
        client_id: "123"
     }
-  }
+  }*/
   //var dashboardData = "dummy";
   res.header('Access-Control-Allow-Origin', '*');
   res.json(dashboardData);
