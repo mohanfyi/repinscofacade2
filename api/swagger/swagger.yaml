@@ -38,11 +38,11 @@ paths:
           required: true
           type: string
       responses:
-        "200":
+        200:
           description: Success
           schema:
             # a pointer to a definition
-            $ref: "#/definitions/Dashboard"
+            $ref: "#/definitions/DashboardResponse"
         # responses may fall through to errors
         default:
           description: Error
@@ -54,15 +54,15 @@ paths:
     get:
       tags:
         - "health"    
-      description: Returns 'Hello' to the caller
+      description: Returns the health status of this service
       # used as the method name of the controller
       operationId: ping
       responses:
-        "200":
+        200:
           description: Success
           schema:
             # a pointer to a definition
-            $ref: "#/definitions/HelloWorldResponse"
+            $ref: "#/definitions/PingResponse"
         # responses may fall through to errors
         default:
           description: Error
@@ -119,7 +119,7 @@ definitions:
             $ref: "#/definitions/Product"
       xml: 
         name: "Client"         
-  Dashboard:
+  DashboardResponse:
       properties:
         client:
           type: "array"
@@ -127,7 +127,7 @@ definitions:
             $ref: "#/definitions/Client"
       xml:
         name: "Dashboard" 
-  HelloWorldResponse:
+  PingResponse:
     required:
       - message
     properties:
