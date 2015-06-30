@@ -78,7 +78,7 @@ function fnGetDashboardDataForClientDummy(req, res) {
     "client": client
   }*/
   var dashboardData = {
-    "client": {
+    "Client": {
        client_id: "123"
     }
   }
