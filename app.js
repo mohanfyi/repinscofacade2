@@ -10,7 +10,7 @@ module.exports = app; // for testing
 		res.render('index.html');
 });*/
 
-app.use(express.static('dist'));
+app.use(express.static('public'));
 
 var config = {
   appRoot: __dirname // required config
