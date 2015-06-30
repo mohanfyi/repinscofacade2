@@ -50,7 +50,7 @@ paths:
             $ref: "#/definitions/ErrorResponse"
   /ping:
     # binds a127 app logic to a route
-    x-swagger-router-controller: ctl_dashboard
+    x-swagger-router-controller: ctl_ping
     get:
       tags:
         - "health"    
