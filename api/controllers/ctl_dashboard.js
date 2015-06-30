@@ -56,7 +56,7 @@ function fnGetDashboardDataForClient(req, response) {
     //the whole response has been recieved, so we just print it out here
     res.on('end', function() {
       console.log(str);
-      //response.header('Access-Control-Allow-Origin', '*');
+      response.header('Access-Control-Allow-Origin', '*');
       //response.status(200).send(str);
       response.json(str);
     });
