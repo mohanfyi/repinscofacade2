@@ -73,7 +73,7 @@ function fnGetDashboardDataForClient(req, response) {
  */
 function fnGetDashboardDataForClientDummy(req, res) {
   var client = getClient();
-  //client.products = getProducts();
+  client.Products = getProducts();
   var dashboardData = {
     "Client": client
   }
