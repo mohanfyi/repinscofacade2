@@ -77,12 +77,12 @@ function fnGetDashboardDataForClientDummy(req, res) {
   /*var dashboardData = {
     "client": client
   }*/
-  /*var dashboardData = {
+  var dashboardData = {
     "client": {
        client_id: "123"
     }
-  }*/
-  var dashboardData = "dummy";
+  }
+  //var dashboardData = "dummy";
   res.header('Access-Control-Allow-Origin', '*');
   res.json(dashboardData);
 
