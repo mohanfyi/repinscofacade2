@@ -57,12 +57,6 @@ paths:
       description: Returns 'Hello' to the caller
       # used as the method name of the controller
       operationId: ping
-      parameters:
-        - name: name
-          in: query
-          description: The name of the person to whom to say hello
-          required: false
-          type: string
       responses:
         "200":
           description: Success
