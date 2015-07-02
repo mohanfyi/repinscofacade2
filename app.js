@@ -1,5 +1,14 @@
 'use strict';
 
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+
+var privateKey  = fs.readFileSync(__dirname + '/keys/key.pem'', 'utf8');
+var certificate = fs.readFileSync(__dirname + '/keys/key-cert.pem', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
+
+
 var SwaggerExpress = require('swagger-express-mw');
 var express = require('express');
 var app = express();
