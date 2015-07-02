@@ -3,6 +3,7 @@
 var SwaggerExpress = require('swagger-express-mw');
 var express = require('express');
 var app = express();
+var logger = require('./logger');
 
 module.exports = app; // for testing
 
@@ -23,6 +24,7 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
   swaggerExpress.register(app);
   
   var port = process.env.PORT || 80;
+  logger.info('Listening to port=' + port);
   app.listen(port);
 
   console.log('try this:\ncurl http://127.0.0.1:' + port + '/hello?name=Scott');
