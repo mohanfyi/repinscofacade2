@@ -6,7 +6,7 @@ process.env.A127_ENV = 'test';
 
 describe('controllers', function() {
 
-  describe('ping', function() {
+  describe('dashboard', function() {
 
     describe('GET /ping', function() {
 
