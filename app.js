@@ -8,7 +8,6 @@ var privateKey  = fs.readFileSync(__dirname + '/keys/key.pem', 'utf8');
 var certificate = fs.readFileSync(__dirname + '/keys/key-cert.pem', 'utf8');
 var credentials = {key: privateKey, cert: certificate};
 
-
 var SwaggerExpress = require('swagger-express-mw');
 var express = require('express');
 var app = express();
@@ -32,9 +31,13 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
   // install middleware
   swaggerExpress.register(app);
   
-  var port = process.env.PORT || 80;
-  logger.info('Listening to port=' + port);
-  app.listen(port);
+  var http_port = 80;
+  var https_port = 443;
+  logger.info('Listening to port(s) http=%d and https=%d', http_port, https_port);
+  //app.listen(port);
+  
+  http.createServer(app).listen(http_port);
+  https.createServer(credentials, app).listen(https_port);
 
   console.log('try this:\ncurl http://127.0.0.1:' + port  );
 });
