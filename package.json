@@ -17,6 +17,6 @@
     "supertest": "^0.15.0"
   },
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "env PORT=8888 PORTS=4444  mocha --recursive"
   }
 }
