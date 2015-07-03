@@ -10,6 +10,10 @@ describe('controllers', function() {
 
     describe('GET /ping', function() {
 
+      it('should pass invariably', function() {
+         ('test').should.eql('test');
+      })
+      
       it('should return a standard string', function(done) {
         request(server)
           .get('/ping')
