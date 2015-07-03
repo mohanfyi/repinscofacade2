@@ -17,7 +17,6 @@
     "supertest": "^0.15.0"
   },
   "scripts": {
-    "runlocal": "env PORT=8080 PORTS=4430 node app.js",
     "runprod": "env PORT=80 PORTS=443 node app.js",
     "test": "env PORT=8888 PORTS=4444  mocha --recursive"
   }
