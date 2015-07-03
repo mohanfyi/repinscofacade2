@@ -16,7 +16,7 @@ describe('controllers', function() {
       
       it('should return a standard string', function(done) {
         request(server)
-          .get('/ping')
+          .get('/v1/ping')
           .set('Accept', 'application/json')
           .expect('Content-Type', /json/)
           .expect(200)
