@@ -33,11 +33,11 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
   
   var http_port = 80;
   var https_port = 443;
-  logger.info('Listening to port(s) http=%d and https=%d', http_port, https_port);
   //app.listen(port);
   
   http.createServer(app).listen(http_port);
   https.createServer(credentials, app).listen(https_port);
+  logger.info('Listening to port(s) http=%d and https=%d', http_port, https_port);
 
-  console.log('try this:\ncurl http://127.0.0.1:' + port  );
+  console.log('try this:\ncurl http://127.0.0.1:' + http_port + '\ncurl https://127.0.0.1:' + https_port);
 });
