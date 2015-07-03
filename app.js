@@ -1,5 +1,7 @@
 'use strict';
 
+var appconfig = require('./config/appconfig');
+
 var fs = require('fs');
 var http = require('http');
 var https = require('https');
@@ -31,8 +33,8 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
   // install middleware
   swaggerExpress.register(app);
   
-  var http_port = 80;
-  var https_port = 443;
+  var http_port = appconfig.http_port;
+  var https_port = appconfig.https_port;
   //app.listen(port);
   
   http.createServer(app).listen(http_port);
