@@ -18,6 +18,7 @@ describe('controllers', function() {
           .expect(200)
           .end(function(err, res) {
             should.not.exist(err);
+            console.log(res.body);
             res.body.should.eql('Hello, stranger!');
             done();
           });
