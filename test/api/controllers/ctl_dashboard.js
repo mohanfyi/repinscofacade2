@@ -23,7 +23,7 @@ describe('controllers', function() {
           .end(function(err, res) {
             should.not.exist(err);
             console.log(res.body);
-            res.body.should.eql('Hello, stranger!');
+            res.body.should.eql('This service is functioning normally!!');
             done();
           });
       });
