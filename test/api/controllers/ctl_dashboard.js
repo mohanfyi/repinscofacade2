@@ -14,7 +14,7 @@ describe('controllers', function() {
          ('test').should.eql('test');
       })
       
-      it('should return a standard string', function(done) {
+      it('should return functioning normally string', function(done) {
         request(server)
           .get('/v1/ping')
           .set('Accept', 'application/json')
@@ -30,8 +30,8 @@ describe('controllers', function() {
 
       it('should accept a name parameter', function(done) {
         request(server)
-          .get('/ping')
-          .query({ name: 'Scott'})
+          .get('/v1/getdashboarddata')
+          .query({ clientid: 100})
           .set('Accept', 'application/json')
           .expect('Content-Type', /json/)
           .expect(200)
